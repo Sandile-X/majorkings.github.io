@@ -1,0 +1,352 @@
+/* Reset some default styles */
+body, h1, h2, ul, nav, section, header, footer, a, p, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 25s infinite;
+}
+
+
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+body::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity if needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Navbar styles */
+.navbar {
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s ease, padding 0.3s ease;
+}
+/* Change color of navbar links on hover */
+.navbar a:hover {
+    color: red;
+    /* Add glow effect */
+    box-shadow: 0 0 10px red;
+    transform: scale(1.2); /* Scaling up the button size */
+ }    
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Default height */
+}
+
+.navbar.shrink {
+    height: 50%; /* Shrunk height */
+}
+
+.navbar.shrink .container {
+    height: 50px;
+}
+
+.navbar .logo a img {
+    width: 50px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+    color: #fcfcfc;
+    text-decoration: none;
+}
+
+.navbar .nav-icons a {
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.navbar .nav-icons img {
+    width: 24px;
+}
+
+
+/* Change color of navbar links on hover */
+.navbar a:hover {
+    color: red; /* Changing font color to red */
+  }
+  
+  /* Dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Style for the dropdown button/link */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #383737;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: all 0.3s; /* Adding transition for smooth animation */
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    color: red; /* Changing font color to red */
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+/* Hero Section */
+.hero-section {
+    height: 80vh;
+    background: url('images/IMG-20240516-WA0019.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: opacity 0.5s ease-out;
+}
+
+.hero-section .hero-content {
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-section .btn {
+    padding: 0.5rem 1rem;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Categories Section */
+.categories {
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.categories .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem;
+    text-align: center;
+}
+
+.categories .section-heading {
+    grid-column: span 3;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.category {
+    text-align: center;
+}
+
+/* Hover effect for category images */
+.category img {
+    width: 100%;
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.category img:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); /* Red glow */
+}
+
+.category .btn-category {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: red;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 2rem;
+    background: rgba(34, 31, 31, 0.8);
+}
+
+.contact-us h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+.contact-us .container {
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+
+.contact-us label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+.contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .categories .container {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Footer Section */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .social-media a {
+    margin: 0 1rem;
+}
+
+.footer .social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .social-media img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .categories .container {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        margin-bottom: 1rem;
+    }
+}
